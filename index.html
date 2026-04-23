@@ -1,53 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mashka Box</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mashca Box</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-    
-    <h1>MASHCA BOX</h1>
-    <p>Transforma tu cuerpo, supera tus limites</p>
-        <img src="img/MashcaBoxSlogan.png" alt="" style="width: 300px; height: 200px;">
+    <nav>
+        <div class="menu">
+            <div class="logo">MASHKA BOX</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <h2>Beneficios</h2>
-    <ul>
-        <li>Ejercicios adaptados a tu nivel</li>
-        <li>Apto para todas las edades</li>
-        <li>La mejor comunidad en Latacunga</li>
-        <li>CrossFit y entrenamiento funcional</li>
-    </ul>
-    
+    <section id="inicio" class="hero">
+        <h1>MASHKA BOX</h1>
+        <p class="subtitulo">Training Club · Latacunga</p>
+        <p class="frase">No necesitas experiencia. Solo ganas de empezar.</p>
+        <a href="#contacto" class="btn">Únete ahora</a>
+    </section>
 
-    <h2>Primera clase GRATIS</h2>
-        <h2>GALERIA DE FOTOS</h2>
+    <section class="seccion">
+        <h2>Beneficios</h2>
+        <div class="cards">
+            <div class="card">Ejercicios adaptados a tu nivel</div>
+            <div class="card"> Apto para todas las edades</div>
+            <div class="card"> Te acompañamos paso a paso</div>
+            <div class="card"> La mejor comunidad en Latacunga</div>
+        </div>
+    </section>
 
-    <h2>Horarios</h2>
-    <p>Lunes a Viernes:</p>
-    <p>5:00 - 8:00 AM</p>
-    <p>4:00 - 8:00 PM</p>
+    <section id="galeria" class="seccion gris">
+        <h2>Galería</h2>
+        <div class="galeria">
+            <img src="img/Img1.jpeg" alt="Foto 1">
+            <img src="img/Img2.jpeg" alt="Foto 2">
+            <img src="img/Img3.jpeg" alt="Foto 3">
+            <img src="img/Img4.jpeg" alt="Foto 4">
+            <img src="img/Img5.jpeg" alt="Foto 5">
+            <img src="img/Img6.jpeg" alt="Foto 6">
+        </div>
+    </section>
 
-    <p>Sábado: 9:00 AM</p>
+    <section class="seccion">
+        <h2>Video</h2>
+        <video controls>
+            <source src="video/MashcaVideo.mp4" type="video/mp4">
+        </video>
+    </section>
 
-    <h2>Promocion</h2>
-    <p>Sin costo de inscripcion</p>
+    <section id="horarios" class="seccion gris">
+        <h2>Horarios</h2>
+        <div class="cards">
+            <div class="card">
+                <strong>Lunes a Viernes</strong><br>
+                 5:00 – 8:00 AM<br>
+                4:00 – 8:00 PM
+            </div>
+            <div class="card">
+                <strong>Sábado</strong><br>
+                 9:00 AM
+            </div>
+        </div>
+    </section>
 
-    <h2>Ubicacion</h2>
-    <p>Av. Unidad Nacional y Manuelita Saenz</p>
+    <section id="ubicacion" class="seccion">
+        <h2>Ubicación</h2>
+        <p> Av. Unidad Nacional y Manuelita Sáenz, Latacunga</p>
+    </section>
 
-    <h2>Contacto</h2>
-    <p>0983421877</p>
-    <p>@mashkabox</p>
+    <section id="contacto" class="seccion gris">
+        <h2>Contacto</h2>
+        <p> <a href="tel:0983421877">0983421877</a></p>
+        <p> <a href="https://instagram.com/mashkabox" target="_blank">@mashkabox</a></p>
 
-    <h2>Formulario</h2>
-    <form>
-        <input type="text" placeholder="Nombre"><br><br>
-        <input type="email" placeholder="Correo"><br><br>
-        <textarea placeholder="Mensaje"></textarea><br><br>
-        <button>Enviar</button>
-    </form>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <textarea placeholder="Mensaje" rows="4" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Mashka Box Training Club · Latacunga</p>
+    </footer>
 
 </body>
-</html>+
+</html>
