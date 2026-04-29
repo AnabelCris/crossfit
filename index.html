@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mashca Box</title>
+    <title>Mashka Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+    <!-- NAV -->
     <nav>
         <div class="menu">
-            <div class="logo">MASHKA BOX</div>
+            <a href="#inicio" class="logo">MASHKA<span>BOX</span></a>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#galeria">Galería</a></li>
@@ -18,81 +22,304 @@
                 <li><a href="#ubicacion">Ubicación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#inicio" onclick="closeMobileMenu()">Inicio</a>
+        <a href="#galeria" onclick="closeMobileMenu()">Galería</a>
+        <a href="#horarios" onclick="closeMobileMenu()">Horarios</a>
+        <a href="#ubicacion" onclick="closeMobileMenu()">Ubicación</a>
+        <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
+    </div>
+
+    <!-- HERO -->
     <section id="inicio" class="hero">
-        <h1>MASHKA BOX</h1>
-        <p class="subtitulo">Training Club · Latacunga</p>
-        <p class="frase">No necesitas experiencia. Solo ganas de empezar.</p>
-        <a href="#contacto" class="btn">Únete ahora</a>
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Training Club · Latacunga, Ecuador</div>
+            <h1>MASHKA<br><span class="highlight">BOX</span></h1>
+            <p class="subtitulo">Más que un box, una comunidad</p>
+            <p class="frase">No necesitas experiencia. Solo ganas de empezar.</p>
+            <a href="#contacto" class="btn">Únete ahora</a>
+        </div>
+        <div class="hero-scroll">▼ Descubre más</div>
     </section>
 
-    <section class="seccion">
-        <h2>Beneficios</h2>
+    <!-- BENEFICIOS -->
+    <section class="seccion beneficios">
+        <p class="section-label">Por qué elegirnos</p>
+        <h2>BENEFICIOS</h2>
+        <div class="divider"></div>
         <div class="cards">
-            <div class="card">Ejercicios adaptados a tu nivel</div>
-            <div class="card"> Apto para todas las edades</div>
-            <div class="card"> Te acompañamos paso a paso</div>
-            <div class="card"> La mejor comunidad en Latacunga</div>
+            <div class="card">
+                <div class="card-icon">💪</div>
+                <p>Ejercicios adaptados a tu nivel</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👥</div>
+                <p>Apto para todas las edades</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏆</div>
+                <p>Te acompañamos paso a paso</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔥</div>
+                <p>La mejor comunidad en Latacunga</p>
+            </div>
         </div>
     </section>
 
+    <!-- GALERÍA -->
     <section id="galeria" class="seccion gris">
-        <h2>Galería</h2>
+        <p class="section-label">Instalaciones</p>
+        <h2>GALERÍA</h2>
+        <div class="divider"></div>
         <div class="galeria">
-            <img src="img/Img1.jpeg" alt="Foto 1">
-            <img src="img/Img2.jpeg" alt="Foto 2">
-            <img src="img/Img3.jpeg" alt="Foto 3">
-            <img src="img/Img4.jpeg" alt="Foto 4">
-            <img src="img/Img5.jpeg" alt="Foto 5">
-            <img src="img/Img6.jpeg" alt="Foto 6">
+            <div class="galeria-item grande" data-src="img/Img1.jpeg">
+                <img src="img/Img1.jpeg" alt="Foto 1">
+            </div>
+            <div class="galeria-item" data-src="img/Img2.jpeg">
+                <img src="img/Img2.jpeg" alt="Foto 2">
+            </div>
+            <div class="galeria-item" data-src="img/Img3.jpeg">
+                <img src="img/Img3.jpeg" alt="Foto 3">
+            </div>
+            <div class="galeria-item" data-src="img/Img4.jpeg">
+                <img src="img/Img4.jpeg" alt="Foto 4">
+            </div>
+            <div class="galeria-item" data-src="img/Img5.jpeg">
+                <img src="img/Img5.jpeg" alt="Foto 5">
+            </div>
+            <div class="galeria-item" data-src="img/Img6.jpeg">
+                <img src="img/Img6.jpeg" alt="Foto 6">
+            </div>
         </div>
     </section>
 
-    <section class="seccion">
-        <h2>Video</h2>
-        <video controls>
-            <source src="video/MashcaVideo.mp4" type="video/mp4">
-        </video>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <img id="lightboxImg" src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- VIDEO -->
+    <section class="seccion video-seccion">
+        <p class="section-label">En Acción</p>
+        <h2>MIRA CÓMO <span>ENTRENAMOS</span></h2>
+        <div class="divider" style="margin: 0 auto 2rem;"></div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="video/MashcaVideo.mp4" type="video/mp4">
+            </video>
+        </div>
     </section>
 
+    <!-- HORARIOS -->
     <section id="horarios" class="seccion gris">
-        <h2>Horarios</h2>
+        <p class="section-label">Clases</p>
+        <h2>HORARIOS</h2>
+        <div class="divider"></div>
+        <div class="horarios-grid">
+            <div class="horario-col manana">
+                <h3>🌅 Lunes a Viernes</h3>
+                <div class="horario-item">
+                    <div class="horario-hora">5:00</div>
+                    <div class="horario-info"><strong>Jornada Mañana</strong>5:00 – 8:00 AM</div>
+                </div>
+                <div class="horario-item">
+                    <div class="horario-hora">16:00</div>
+                    <div class="horario-info"><strong>Jornada Tarde</strong>4:00 – 8:00 PM</div>
+                </div>
+            </div>
+            <div class="horario-col tarde">
+                <h3>🌤 Sábado</h3>
+                <div class="horario-item">
+                    <div class="horario-hora">9:00</div>
+                    <div class="horario-info"><strong>Clase Especial</strong>9:00 AM</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALIMENTACIÓN -->
+    <section id="alimentacion" class="seccion">
+        <p class="section-label">Nutrición</p>
+        <h2>SERVICIOS DE <span>ALIMENTACIÓN</span></h2>
+        <div class="divider"></div>
         <div class="cards">
             <div class="card">
-                <strong>Lunes a Viernes</strong><br>
-                 5:00 – 8:00 AM<br>
-                4:00 – 8:00 PM
+                <div class="card-icon">🥤</div>
+                <p>Batidos proteicos</p>
             </div>
             <div class="card">
-                <strong>Sábado</strong><br>
-                 9:00 AM
+                <div class="card-icon">🍎</div>
+                <p>Snacks saludables</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <p>Planes nutricionales</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧑‍⚕️</div>
+                <p>Asesoría en alimentación fitness</p>
             </div>
         </div>
     </section>
 
-    <section id="ubicacion" class="seccion">
-        <h2>Ubicación</h2>
-        <p> Av. Unidad Nacional y Manuelita Sáenz, Latacunga</p>
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="seccion gris">
+        <p class="section-label">Dónde estamos</p>
+        <h2>UBICACIÓN</h2>
+        <div class="divider"></div>
+        <div class="ubicacion-grid">
+            <div class="mapa-frame">
+                <iframe
+                    src="https://www.google.com/maps?q=Av.+Unidad+Nacional+y+Manuelita+Sáenz,+Latacunga&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="ubicacion-info">
+                <h3>MASHKA BOX<br>Training Club</h3>
+                <div class="info-row">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <strong>Dirección</strong>
+                        <span>Av. Unidad Nacional y Manuelita Sáenz<br>Latacunga, Cotopaxi — Ecuador</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <strong>Teléfono / WhatsApp</strong>
+                        <span><a href="tel:0983421877">0983421877</a></span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-icon">🕐</div>
+                    <div class="info-text">
+                        <strong>Horario de atención</strong>
+                        <span>Lunes a Sábado: 5:00 AM – 8:00 PM</span>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=Av.+Unidad+Nacional+y+Manuelita+Saenz,+Latacunga,+Ecuador"
+                   target="_blank" rel="noopener" class="btn" style="margin-top:1rem;display:inline-block;">
+                    CÓMO LLEGAR
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section id="contacto" class="seccion gris">
-        <h2>Contacto</h2>
-        <p> <a href="tel:0983421877">0983421877</a></p>
-        <p> <a href="https://instagram.com/mashkabox" target="_blank">@mashkabox</a></p>
-
-        <form>
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo" required>
-            <textarea placeholder="Mensaje" rows="4" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion">
+        <p class="section-label">Únete</p>
+        <h2>CONTÁCTANOS</h2>
+        <div class="divider"></div>
+        <div class="contacto-grid">
+            <div class="contacto-info">
+                <div class="info-row">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <strong>Teléfono</strong>
+                        <span><a href="tel:0983421877">0983421877</a></span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-icon">📷</div>
+                    <div class="info-text">
+                        <strong>Instagram</strong>
+                        <span><a href="https://instagram.com/mashkabox" target="_blank">@mashkabox</a></span>
+                    </div>
+                </div>
+                <p class="contacto-desc">¿Listo para transformar tu vida? Escríbenos y uno de nuestros coaches te responderá a la brevedad.</p>
+            </div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+                <div class="form-msg" id="formMsg"></div>
+            </form>
+        </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2025 Mashka Box Training Club · Latacunga</p>
+        <div class="footer-inner">
+            <span class="logo">MASHKA<span>BOX</span></span>
+            <p>Training Club · Latacunga, Ecuador</p>
+        </div>
     </footer>
 
+    <button class="scroll-top" id="scrollTop" aria-label="Volver al inicio">▲</button>
+
+    <script>
+        // Hamburger
+        const ham = document.getElementById('hamburger');
+        const mMenu = document.getElementById('mobileMenu');
+        ham.addEventListener('click', () => mMenu.classList.toggle('open'));
+        function closeMobileMenu() { mMenu.classList.remove('open'); }
+
+        // Lightbox
+        document.querySelectorAll('.galeria-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const lb = document.getElementById('lightbox');
+                const img = document.getElementById('lightboxImg');
+                img.src = item.dataset.src;
+                lb.classList.add('open');
+            });
+        });
+        document.getElementById('lightboxClose').addEventListener('click', () =>
+            document.getElementById('lightbox').classList.remove('open'));
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if(e.target === this) this.classList.remove('open');
+        });
+        document.addEventListener('keydown', e => {
+            if(e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+        });
+
+        // Scroll top
+        const stBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            stBtn.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        // Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const msg = document.getElementById('formMsg');
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.textContent = 'Enviar';
+                btn.disabled = false;
+                msg.className = 'form-msg success';
+                msg.style.display = 'block';
+                msg.textContent = '¡Mensaje enviado! Te responderemos pronto.';
+                this.reset();
+                setTimeout(() => { msg.style.display = 'none'; }, 5000);
+            }, 1200);
+        });
+    </script>
 </body>
 </html>
