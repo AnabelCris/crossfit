@@ -1,41 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<<<<<<< HEAD
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mashka Box</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Barlow:wght@400;500;600;700;900&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-    <!-- NAV -->
-    <nav>
-        <div class="menu">
-            <a href="#inicio" class="logo">MASHKA<span>BOX</span></a>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#horarios">Horarios</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-                <span></span><span></span><span></span>
-            </button>
-=======
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mashka Box Training Club</title>
   <link rel="stylesheet" href="css/styles.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- NAVEGACION -->
+  <!-- ============================================================
+       NAVEGACIÓN
+  ============================================================ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#inicio" class="nav-logo">
@@ -56,9 +33,12 @@
     </div>
   </nav>
 
-  <!-- HERO (SECCION PRINCIPAL) -->
+  <!-- ============================================================
+       HERO / SECCIÓN PRINCIPAL
+  ============================================================ -->
   <header class="hero" id="inicio">
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
       <p class="hero-eyebrow">Latacunga · Ecuador</p>
       <h1 class="hero-title">
@@ -71,30 +51,39 @@
     </div>
   </header>
 
-  <!-- GALERIA -->
-  <section>
-    <div class="galeria-header">
-      <p class="section-eyebrow center">Galería</p>
-      <h2 class="section-title center">
-        Momentos reales <span class="yellow">de esfuerzo y superación</span>
-      </h2>
-    </div>
+  <!-- ============================================================
+       GALERÍA
 
-    <div class="galeria-grid">
-      <img src="img/Img1.jpeg" alt="Clase grupal" />
-      <img src="img/Img2.jpeg" alt="Entrenamiento funcional" />
-      <img src="img/Img3.jpeg" alt="CrossFit Mashka" />
-      <img src="img/Img4.jpeg" alt="Comunidad Mashka Box" />
-      <img src="img/Img7.jpg" alt="Sesión de entrenamiento" />
-      <img src="img/Img6.jpeg" alt="Sesion de crossfit" />
-    </div>
+<section class="galeria">
 
-    <div class="galeria-text-card">
-      <p>"La mejor<br>versión de ti<br>empieza aquí."</p>
-    </div>
-  </section>
+  <!-- ENCABEZADO -->
+  <div class="galeria-header">
+    <p class="section-eyebrow center">Galería</p>
+    <h2 class="section-title center">
+      Momentos reales <span class="yellow">de esfuerzo y superación</span>
+    </h2>
+  </div>
 
-  <!-- BENEFICIOS -->
+  <!-- GRID DE IMÁGENES -->
+  <div class="galeria-grid">
+    <img src="img/Img1.jpeg" alt="Clase grupal" />
+    <img src="img/Img2.jpeg" alt="Entrenamiento funcional" />
+    <img src="img/Img3.jpeg" alt="CrossFit Mashka" />
+    <img src="img/Img4.jpeg" alt="Comunidad Mashka Box" />
+    <img src="img/Img7.jpg" alt="Sesión de entrenamiento" />
+    <img src="img/Img6.jpeg" alt="Sesion de crossfit">
+  </div>
+
+  <!-- TEXTO FINAL -->
+  <div class="galeria-text-card">
+    <p>"La mejor<br>versión de ti<br>empieza aquí."</p>
+  </div>
+
+</section>
+
+  <!-- ============================================================
+       BENEFICIOS
+  ============================================================ -->
   <section class="beneficios" id="beneficios">
     <div class="container">
       <p class="section-eyebrow center">¿Por Qué Elegirnos?</p>
@@ -134,7 +123,9 @@
     </div>
   </section>
 
-  <!-- PLANES -->
+  <!-- ============================================================
+       PLANES / MEMBRESÍAS
+  ============================================================ -->
   <section class="planes" id="planes">
     <div class="container">
       <p class="section-eyebrow center">Membresías</p>
@@ -146,266 +137,22 @@
           <p class="plan-price">$30 <span>c/u</span></p>
           <p class="plan-desc">Desde 3 personas</p>
           <a href="#contacto" class="btn btn-outline-small">Reservar</a>
->>>>>>> 4b2f15c (Version completa y diseño terminado)
         </div>
 
-<<<<<<< HEAD
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#inicio" onclick="closeMobileMenu()">Inicio</a>
-        <a href="#galeria" onclick="closeMobileMenu()">Galería</a>
-        <a href="#horarios" onclick="closeMobileMenu()">Horarios</a>
-        <a href="#ubicacion" onclick="closeMobileMenu()">Ubicación</a>
-        <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
-    </div>
-
-    <!-- HERO -->
-    <section id="inicio" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge">Training Club · Latacunga, Ecuador</div>
-            <h1>MASHKA<br><span class="highlight">BOX</span></h1>
-            <p class="subtitulo">Más que un box, una comunidad</p>
-            <p class="frase">No necesitas experiencia. Solo ganas de empezar.</p>
-            <a href="#contacto" class="btn">Únete ahora</a>
-        </div>
-        <div class="hero-scroll">▼ Descubre más</div>
-    </section>
-
-    <!-- BENEFICIOS -->
-    <section class="seccion beneficios">
-        <p class="section-label">Por qué elegirnos</p>
-        <h2>BENEFICIOS</h2>
-        <div class="divider"></div>
-        <div class="cards">
-            <div class="card">
-                <div class="card-icon">💪</div>
-                <p>Ejercicios adaptados a tu nivel</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">👥</div>
-                <p>Apto para todas las edades</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🏆</div>
-                <p>Te acompañamos paso a paso</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🔥</div>
-                <p>La mejor comunidad en Latacunga</p>
-            </div>
-=======
         <div class="plan-card">
           <p class="plan-header blue">Plan Estudiantes</p>
           <p class="plan-price">$30</p>
           <p class="plan-desc">Con carnet vigente</p>
           <a href="#contacto" class="btn btn-outline-small">Reservar</a>
->>>>>>> 4b2f15c (Version completa y diseño terminado)
         </div>
 
-<<<<<<< HEAD
-    <!-- GALERÍA -->
-    <section id="galeria" class="seccion gris">
-        <p class="section-label">Instalaciones</p>
-        <h2>GALERÍA</h2>
-        <div class="divider"></div>
-        <div class="galeria">
-            <div class="galeria-item grande" data-src="img/Img1.jpeg">
-                <img src="img/Img1.jpeg" alt="Foto 1">
-            </div>
-            <div class="galeria-item" data-src="img/Img2.jpeg">
-                <img src="img/Img2.jpeg" alt="Foto 2">
-            </div>
-            <div class="galeria-item" data-src="img/Img3.jpeg">
-                <img src="img/Img3.jpeg" alt="Foto 3">
-            </div>
-            <div class="galeria-item" data-src="img/Img4.jpeg">
-                <img src="img/Img4.jpeg" alt="Foto 4">
-            </div>
-            <div class="galeria-item" data-src="img/Img5.jpeg">
-                <img src="img/Img5.jpeg" alt="Foto 5">
-            </div>
-            <div class="galeria-item" data-src="img/Img6.jpeg">
-                <img src="img/Img6.jpeg" alt="Foto 6">
-            </div>
-=======
         <div class="plan-card">
           <p class="plan-header blue">Plan Mensual</p>
           <p class="plan-price">$35</p>
           <p class="plan-desc">¡Intenta un mes!</p>
           <a href="#contacto" class="btn btn-outline-small">Reservar</a>
->>>>>>> 4b2f15c (Version completa y diseño terminado)
         </div>
 
-<<<<<<< HEAD
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">✕</button>
-        <img id="lightboxImg" src="" alt="Imagen ampliada">
-    </div>
-
-    <!-- VIDEO -->
-    <section class="seccion video-seccion">
-        <p class="section-label">En Acción</p>
-        <h2>MIRA CÓMO <span>ENTRENAMOS</span></h2>
-        <div class="divider" style="margin: 0 auto 2rem;"></div>
-        <div class="video-wrapper">
-            <video controls>
-                <source src="video/MashcaVideo.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
-
-    <!-- HORARIOS -->
-    <section id="horarios" class="seccion gris">
-        <p class="section-label">Clases</p>
-        <h2>HORARIOS</h2>
-        <div class="divider"></div>
-        <div class="horarios-grid">
-            <div class="horario-col manana">
-                <h3>🌅 Lunes a Viernes</h3>
-                <div class="horario-item">
-                    <div class="horario-hora">5:00</div>
-                    <div class="horario-info"><strong>Jornada Mañana</strong>5:00 – 8:00 AM</div>
-                </div>
-                <div class="horario-item">
-                    <div class="horario-hora">16:00</div>
-                    <div class="horario-info"><strong>Jornada Tarde</strong>4:00 – 8:00 PM</div>
-                </div>
-            </div>
-            <div class="horario-col tarde">
-                <h3>🌤 Sábado</h3>
-                <div class="horario-item">
-                    <div class="horario-hora">9:00</div>
-                    <div class="horario-info"><strong>Clase Especial</strong>9:00 AM</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ALIMENTACIÓN -->
-    <section id="alimentacion" class="seccion">
-        <p class="section-label">Nutrición</p>
-        <h2>SERVICIOS DE <span>ALIMENTACIÓN</span></h2>
-        <div class="divider"></div>
-        <div class="cards">
-            <div class="card">
-                <div class="card-icon">🥤</div>
-                <p>Batidos proteicos</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🍎</div>
-                <p>Snacks saludables</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">📋</div>
-                <p>Planes nutricionales</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🧑‍⚕️</div>
-                <p>Asesoría en alimentación fitness</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- UBICACIÓN -->
-    <section id="ubicacion" class="seccion gris">
-        <p class="section-label">Dónde estamos</p>
-        <h2>UBICACIÓN</h2>
-        <div class="divider"></div>
-        <div class="ubicacion-grid">
-            <div class="mapa-frame">
-                <iframe
-                    src="https://www.google.com/maps?q=Av.+Unidad+Nacional+y+Manuelita+Sáenz,+Latacunga&output=embed"
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
-            </div>
-            <div class="ubicacion-info">
-                <h3>MASHKA BOX<br>Training Club</h3>
-                <div class="info-row">
-                    <div class="info-icon">📍</div>
-                    <div class="info-text">
-                        <strong>Dirección</strong>
-                        <span>Av. Unidad Nacional y Manuelita Sáenz<br>Latacunga, Cotopaxi — Ecuador</span>
-                    </div>
-                </div>
-                <div class="info-row">
-                    <div class="info-icon">📞</div>
-                    <div class="info-text">
-                        <strong>Teléfono / WhatsApp</strong>
-                        <span><a href="tel:0983421877">0983421877</a></span>
-                    </div>
-                </div>
-                <div class="info-row">
-                    <div class="info-icon">🕐</div>
-                    <div class="info-text">
-                        <strong>Horario de atención</strong>
-                        <span>Lunes a Sábado: 5:00 AM – 8:00 PM</span>
-                    </div>
-                </div>
-                <a href="https://maps.google.com/?q=Av.+Unidad+Nacional+y+Manuelita+Saenz,+Latacunga,+Ecuador"
-                   target="_blank" rel="noopener" class="btn" style="margin-top:1rem;display:inline-block;">
-                    CÓMO LLEGAR
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="seccion">
-        <p class="section-label">Únete</p>
-        <h2>CONTÁCTANOS</h2>
-        <div class="divider"></div>
-        <div class="contacto-grid">
-            <div class="contacto-info">
-                <div class="info-row">
-                    <div class="info-icon">📞</div>
-                    <div class="info-text">
-                        <strong>Teléfono</strong>
-                        <span><a href="tel:0983421877">0983421877</a></span>
-                    </div>
-                </div>
-                <div class="info-row">
-                    <div class="info-icon">📷</div>
-                    <div class="info-text">
-                        <strong>Instagram</strong>
-                        <span><a href="https://instagram.com/mashkabox" target="_blank">@mashkabox</a></span>
-                    </div>
-                </div>
-                <p class="contacto-desc">¿Listo para transformar tu vida? Escríbenos y uno de nuestros coaches te responderá a la brevedad.</p>
-            </div>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="Tu nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo</label>
-                    <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn">Enviar</button>
-                <div class="form-msg" id="formMsg"></div>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-inner">
-            <span class="logo">MASHKA<span>BOX</span></span>
-            <p>Training Club · Latacunga, Ecuador</p>
-        </div>
-    </footer>
-=======
         <div class="plan-card featured">
           <span class="plan-badge">MÁS POPULAR</span>
           <p class="plan-header yellow-bg">Plan Trimestral</p>
@@ -425,37 +172,39 @@
     </div>
   </section>
 
-  <!-- NUTRICION -->
-  <section class="nutri-section" id="alimentacion">
-    <div class="nutri-inner">
-      <p class="nutri-eyebrow">Nutrición</p>
-      <h2 class="nutri-title">Servicios de <span>alimentación</span></h2>
-      <div class="nutri-grid">
-        <div class="nutri-card c1">
-          <span class="nutri-icon">🥤</span>
-          <h3>Batidos proteicos</h3>
-          <p>Recuperación muscular óptima después de cada sesión.</p>
-        </div>
-        <div class="nutri-card c2">
-          <span class="nutri-icon">🍎</span>
-          <h3>Snacks saludables</h3>
-          <p>Opciones nutritivas para mantener tu energía al máximo.</p>
-        </div>
-        <div class="nutri-card c3">
-          <span class="nutri-icon">📋</span>
-          <h3>Planes nutricionales</h3>
-          <p>Planes personalizados según tu objetivo y estilo de vida.</p>
-        </div>
-        <div class="nutri-card c4">
-          <span class="nutri-icon">🧑‍⚕️</span>
-          <h3>Asesoría fitness</h3>
-          <p>Guía experta en alimentación deportiva para mejores resultados.</p>
-        </div>
+ <!-- ALIMENTACIÓN -->
+   <section class="nutri-section" id="alimentacion">
+  <div class="nutri-inner">
+    <p class="nutri-eyebrow">Nutrición</p>
+    <h2 class="nutri-title">Servicios de <span>alimentación</span></h2>
+    <div class="nutri-grid">
+      <div class="nutri-card c1">
+        <span class="nutri-icon">🥤</span>
+        <h3>Batidos proteicos</h3>
+        <p>Recuperación muscular óptima después de cada sesión.</p>
+      </div>
+      <div class="nutri-card c2">
+        <span class="nutri-icon">🍎</span>
+        <h3>Snacks saludables</h3>
+        <p>Opciones nutritivas para mantener tu energía al máximo.</p>
+      </div>
+      <div class="nutri-card c3">
+        <span class="nutri-icon">📋</span>
+        <h3>Planes nutricionales</h3>
+        <p>Planes personalizados según tu objetivo y estilo de vida.</p>
+      </div>
+      <div class="nutri-card c4">
+        <span class="nutri-icon">🧑‍⚕️</span>
+        <h3>Asesoría fitness</h3>
+        <p>Guía experta en alimentación deportiva para mejores resultados.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- HORARIOS -->
+  <!-- ============================================================
+       HORARIOS
+  ============================================================ -->
   <section class="horarios" id="horarios">
     <div class="container">
       <h2 class="section-title center">Horarios de <span class="yellow">Atención</span> 🔥</h2>
@@ -487,7 +236,9 @@
     </div>
   </section>
 
-  <!-- VIDEO -->
+  <!-- ============================================================
+       MULTIMEDIA - VIDEO
+  ============================================================ -->
   <section class="multimedia" id="multimedia">
     <div class="container">
       <p class="section-eyebrow center">En Acción</p>
@@ -495,12 +246,15 @@
       <div class="video-wrap">
         <video controls poster="MashkaBoxSlogan.jpeg">
           <source src="video/MashcaBox_VIDEO.mp4" type="video/mp4" />
+          Tu navegador no soporta video HTML5. <a href="video/MashcaBox_VIDEO.mp4">Descarga el video</a>.
         </video>
       </div>
     </div>
   </section>
 
-  <!-- MAPA -->
+  <!-- ============================================================
+       IFRAME - MAPA
+  ============================================================ -->
   <section class="ubicacion" id="ubicacion">
     <div class="container">
       <p class="section-eyebrow center">Encuéntranos</p>
@@ -521,24 +275,25 @@
     </div>
   </section>
 
-  <!-- FORMULARIO DE CONTACTO -->
+  <!-- ============================================================
+       FORMULARIO DE CONTACTO
+  ============================================================ -->
   <section class="contacto" id="contacto">
     <div class="container">
       <p class="section-eyebrow center">¡Reserva Ya!</p>
       <h2 class="section-title center">Tu primera clase es <span class="yellow">GRATIS</span></h2>
       <div class="contacto-grid">
-        <!-- FIX: se agregó > de cierre en la etiqueta <form> -->
-        <form class="contact-form" id="contactoForm">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <div class="form-group">
               <label for="nombre">Nombre *</label>
               <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
             </div>
+            
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="email">Correo electrónico *</label>
-              
               <input type="email" id="email" name="email" placeholder="tucorreo@email.com" required />
             </div>
             <div class="form-group">
@@ -546,16 +301,22 @@
               <input type="tel" id="telefono" name="telefono" placeholder="0998765432" required />
             </div>
           </div>
+          
           <button type="submit" class="btn btn-primary full-width">¡Quiero mi Clase Gratis! 🥊</button>
-          <div class="form-success" id="formSuccess" style="display:none;">
-            ✅ ¡Mensaje enviado! Te contactaremos pronto.
+          <div class="form-success" id="formSuccess">
+            ✅ ¡Mensaje enviado! Te contactaremos pronto por WhatsApp.
           </div>
         </form>
+
+          
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PIE DE PAGINA -->
+  <!-- ============================================================
+       PIE DE PÁGINA
+  ============================================================ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -576,85 +337,6 @@
     </div>
   </footer>
 
- 
-
->>>>>>> 4b2f15c (Version completa y diseño terminado)
-
-    <button class="scroll-top" id="scrollTop" aria-label="Volver al inicio">▲</button>
-
-    <script>
-        // Hamburger
-        const ham = document.getElementById('hamburger');
-        const mMenu = document.getElementById('mobileMenu');
-        ham.addEventListener('click', () => mMenu.classList.toggle('open'));
-        function closeMobileMenu() { mMenu.classList.remove('open'); }
-
-        // Lightbox
-        document.querySelectorAll('.galeria-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const lb = document.getElementById('lightbox');
-                const img = document.getElementById('lightboxImg');
-                img.src = item.dataset.src;
-                lb.classList.add('open');
-            });
-        });
-        document.getElementById('lightboxClose').addEventListener('click', () =>
-            document.getElementById('lightbox').classList.remove('open'));
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if(e.target === this) this.classList.remove('open');
-        });
-        document.addEventListener('keydown', e => {
-            if(e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
-        });
-
-        // Scroll top
-        const stBtn = document.getElementById('scrollTop');
-        window.addEventListener('scroll', () => {
-            stBtn.classList.toggle('visible', window.scrollY > 400);
-        });
-
-        // Form
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const msg = document.getElementById('formMsg');
-            btn.textContent = 'Enviando...';
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = 'Enviar';
-                btn.disabled = false;
-                msg.className = 'form-msg success';
-                msg.style.display = 'block';
-                msg.textContent = '¡Mensaje enviado! Te responderemos pronto.';
-                this.reset();
-                setTimeout(() => { msg.style.display = 'none'; }, 5000);
-            }, 1200);
-        });
-    </script>
-
-    <script>
-  document.getElementById('contactoForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-
-    try {
-      const res = await fetch('guardar.php', {
-        method: 'POST',
-        body: formData
-      });
-
-      const texto = await res.text();
-
-      if (texto.includes('exitoso')) {
-        document.getElementById('formSuccess').style.display = 'block';
-        this.reset();
-      }
-
-    } catch (err) {
-      
-    }
-  });
-</script>
+  
 </body>
 </html>
