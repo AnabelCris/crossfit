@@ -631,5 +631,30 @@
             }, 1200);
         });
     </script>
+
+    <script>
+  document.getElementById('contactoForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    try {
+      const res = await fetch('guardar.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      const texto = await res.text();
+
+      if (texto.includes('exitoso')) {
+        document.getElementById('formSuccess').style.display = 'block';
+        this.reset();
+      }
+
+    } catch (err) {
+      
+    }
+  });
+</script>
 </body>
 </html>
