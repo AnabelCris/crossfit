@@ -68,7 +68,7 @@ ul { list-style: none; }
   margin-bottom: 1rem;
 }
 
-/* BUTTONS */
+/* ── BUTTONS ── */
 .btn {
   display: inline-block;
   font-family: var(--font-heading);
@@ -121,7 +121,7 @@ ul { list-style: none; }
 }
 .full-width { width: 100%; text-align: center; }
 
-/* NAVBAR */
+/* ── NAVBAR ── */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -193,7 +193,7 @@ ul { list-style: none; }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* HERO */
+/* ── HERO ── */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -249,7 +249,7 @@ ul { list-style: none; }
 }
 .hero-slogan em { color: var(--amarillo); font-style: normal; font-weight: 600; }
 
-/* GALERÍA */
+/* ── GALERÍA ── */
 .galeria { padding: 0; overflow: hidden; }
 .galeria-grid {
   display: grid;
@@ -276,7 +276,7 @@ ul { list-style: none; }
   text-transform: uppercase;
 }
 
-/* BENEFICIOS */
+/* ── BENEFICIOS ── */
 .beneficios { padding: 100px 0; background: var(--negro); }
 .beneficios-list {
   display: grid;
@@ -311,7 +311,7 @@ ul { list-style: none; }
 }
 .beneficio-card p { font-size: 0.95rem; color: var(--gris); line-height: 1.6; }
 
-/* PLANES */
+/* ── PLANES ── */
 .planes { padding: 100px 0; background: var(--negro-light); }
 .planes-cards {
   display: grid;
@@ -364,7 +364,7 @@ ul { list-style: none; }
 .plan-price span { font-family: var(--font-heading); font-size: 1rem; color: var(--gris); }
 .plan-desc { font-family: var(--font-body); font-size: 0.9rem; color: var(--gris); }
 
-/* NUTRICIÓN */
+/* ── NUTRICIÓN ── */
 .nutri-section { padding: 100px 0; background: var(--negro); }
 .nutri-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
 .nutri-eyebrow {
@@ -411,10 +411,8 @@ ul { list-style: none; }
   letter-spacing: 0.07em; color: var(--blanco); margin: 0;
 }
 .nutri-card p { font-size: 0.88rem; color: var(--gris); line-height: 1.6; margin: 0; }
-@media (max-width: 768px) {
-  .nutri-grid { grid-template-columns: repeat(2, 1fr); }
-}
-/* HORARIOS */
+
+/* ── HORARIOS ── */
 .horarios {
   padding: 100px 0;
   background: var(--negro-light);
@@ -477,7 +475,7 @@ ul { list-style: none; }
 .horario-note { text-align: center; margin-top: 28px; font-size: 0.9rem; color: var(--gris); }
 .horario-note strong { color: var(--amarillo); }
 
-/* MULTIMEDIA */
+/* ── MULTIMEDIA ── */
 .multimedia { padding: 100px 0; background: var(--negro); }
 .video-wrap {
   margin-top: 48px;
@@ -493,7 +491,7 @@ ul { list-style: none; }
   background: var(--negro);
 }
 
-/* UBICACIÓN */
+/* ── UBICACIÓN ── */
 .ubicacion { padding: 100px 0; background: var(--negro-light); }
 .ubicacion-address { text-align: center; color: var(--gris); font-size: 1rem; margin-bottom: 32px; }
 .mapa-wrap {
@@ -504,7 +502,7 @@ ul { list-style: none; }
 }
 .mapa-wrap iframe { display: block; filter: grayscale(30%) contrast(1.1); }
 
-/* CONTACTO */
+/* ── CONTACTO ── */
 .contacto { padding: 100px 0; background: var(--negro); }
 .contacto-grid {
   display: grid;
@@ -582,7 +580,7 @@ ul { list-style: none; }
 .info-card a { color: var(--celeste); }
 .info-card strong { color: var(--blanco); }
 
-/* FOOTER */
+/* ── FOOTER ── */
 .footer {
   background: #050505;
   border-top: 1px solid rgba(59,168,216,0.15);
@@ -622,3 +620,289 @@ ul { list-style: none; }
 .social-btn.whatsapp { border-color: rgba(245,200,0,0.4); color: var(--amarillo); }
 .footer-bottom { text-align: center; padding: 20px 0; }
 .footer-bottom p { font-size: 0.8rem; color: var(--gris); letter-spacing: 0.03em; }
+
+
+/* ================================================================
+   RESPONSIVE — TABLET  (max 1024px)
+   ================================================================ */
+@media (max-width: 1024px) {
+
+  /* Galería: 3 columnas en tablet */
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 220px);
+  }
+
+  /* Beneficios: 2 columnas */
+  .beneficios-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Nutrición: 2 columnas */
+  .nutri-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contacto: 1 sola columna */
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer: 1 columna */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+
+/* ================================================================
+   RESPONSIVE — MOBILE  (max 768px)
+   ================================================================ */
+@media (max-width: 768px) {
+
+  /* ── NAVBAR MÓVIL ── */
+  .hamburger {
+    display: flex; /* muestra el botón hamburguesa */
+  }
+
+  .nav-links {
+    display: none; /* oculta el menú horizontal */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 72px; left: 0; right: 0;
+    background: rgba(10,10,10,0.98);
+    border-bottom: 1px solid rgba(59,168,216,0.2);
+    padding: 16px 0;
+    z-index: 999;
+  }
+
+  /* Cuando se activa el menú hamburguesa con JS */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-cta {
+    margin: 12px 24px !important;
+    text-align: center !important;
+    border-radius: var(--radius) !important;
+    padding: 12px 18px !important;
+  }
+
+  /* ── HERO MÓVIL ── */
+  .hero-content {
+    padding: 100px 24px 60px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(4rem, 20vw, 6rem);
+  }
+
+  .hero-slogan {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
+
+  /* ── GALERÍA MÓVIL ── */
+  /* 2 columnas compactas, imágenes cuadradas */
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 160px);
+    gap: 3px;
+  }
+
+  .galeria-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .galeria-text-card {
+    padding: 20px 16px;
+    min-height: 100px;
+  }
+
+  .galeria-text-card p {
+    font-size: 1.2rem;
+  }
+
+  .galeria-header {
+    padding: 40px 16px 20px;
+  }
+
+  /* ── SECCIONES: reducir padding vertical ── */
+  .beneficios,
+  .planes,
+  .nutri-section,
+  .horarios,
+  .multimedia,
+  .ubicacion,
+  .contacto {
+    padding: 64px 0;
+  }
+
+  /* ── BENEFICIOS MÓVIL ── */
+  .beneficios-list {
+    grid-template-columns: 1fr; /* 1 columna */
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .beneficio-card {
+    padding: 28px 20px;
+  }
+
+  /* ── PLANES MÓVIL ── */
+  .planes-cards {
+    grid-template-columns: 1fr; /* 1 columna, apilados */
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  /* ── NUTRICIÓN MÓVIL ── */
+  .nutri-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+    gap: 12px;
+  }
+
+  .nutri-card {
+    padding: 24px 20px;
+  }
+
+  /* ── HORARIOS MÓVIL ── */
+  .horarios-grid {
+    flex-direction: column; /* mañana arriba, tarde abajo */
+    margin-top: 32px;
+  }
+
+  .horario-divider {
+    width: 100%;
+    height: 1px; /* ahora es horizontal */
+  }
+
+  .horario-col {
+    padding: 32px 24px;
+  }
+
+  .horario-list li {
+    font-size: 1.6rem;
+    padding: 8px 16px;
+  }
+
+  /* ── UBICACIÓN MÓVIL ── */
+  .ubicacion {
+    padding-bottom: 40px;
+  }
+
+  .mapa-wrap {
+    border-radius: var(--radius);
+    margin: 0 0 0 0;
+  }
+
+  .mapa-wrap iframe {
+    height: 320px;
+    width: 100%;
+    display: block;
+  }
+
+  .ubicacion-address {
+    font-size: 0.9rem;
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+
+
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  /* Fila de 2 campos pasa a 1 columna */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── FOOTER MÓVIL ── */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-social {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* ================================================================
+   RESPONSIVE — MOBILE PEQUEÑO (max 480px)
+   ================================================================ */
+@media (max-width: 480px) {
+
+  /* Galería: 2 columnas compactas incluso en pantallas muy pequeñas */
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 140px);
+    gap: 2px;
+  }
+
+  /* Hero aún más compacto */
+  .hero-content {
+    padding: 90px 16px 50px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 22vw, 5rem);
+  }
+
+  /* Horarios: números más pequeños */
+  .horario-list li {
+    font-size: 1.4rem;
+    padding: 8px 12px;
+  }
+
+  /* Planes: precio más pequeño */
+  .plan-price {
+    font-size: 2.4rem;
+  }
+
+  /* Botón ancho completo en hero */
+  .hero-content .btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}

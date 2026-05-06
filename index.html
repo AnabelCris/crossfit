@@ -327,5 +327,42 @@
     });
   </script>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  document.getElementById('contactoForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    try {
+      const res   = await fetch('guardar.php', { method: 'POST', body: formData });
+      const texto = await res.text();
+      if (texto.includes('exitoso')) {
+        document.getElementById('formSuccess').style.display = 'block';
+        this.reset();
+      } else {
+        alert('Hubo un error, intenta de nuevo.');
+      }
+    } catch (err) {
+      alert('No se pudo conectar con el servidor.');
+    }
+  });
+</script>
 </body>
 </html>
